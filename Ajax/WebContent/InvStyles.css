@@ -1,0 +1,82 @@
+body {
+    background-image: url("invpic.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.container{
+    margin: auto;
+    background: rgba(235, 233, 232, 0.904);
+    box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+    border-radius: 6px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.top{
+    
+    width:80%;
+    height: 450px;
+    position: relative;
+    margin: 100px auto  ;
+    overflow: hidden;
+}
+.btn-box{
+    font-family: Calibri, Candara, Segoe, “Segoe UI”, Optima, Arial, sans-serif;;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.btn-box button{
+    font-family: Calibri, Candara, Segoe, “Segoe UI”, Optima, Arial, sans-serif;;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.btn-box button:hover{
+    color:#4c72db;
+    transform: scale(1.1);
+    transition: all .1s ease-in-out;
+}  
+#invtab {
+    font-family: Calibri, Candara, Segoe, “Segoe UI”, Optima, Arial, sans-serif;
+    position: relative;
+    top: 20px;
+    border-collapse: collapse;
+    width: 70%;
+    height: 150%;
+    overflow-y: scroll;
+    
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 1px;
+    overflow: visible;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: #3561da;/*ff7846*/
+    color: white;
+  }
+  #inv_tbod{
+      overflow-y: scroll;
+      height: 120%;
+  }
+  #rad{
+      position: relative;
+      left: 200px;
+      bottom: 170px;
+      font-family: Calibri, Candara, Segoe, “Segoe UI”, Optima, Arial, sans-serif;
+      display: none;
+  }
+  #piechart{
+      animation: fadeIn ease 1s;
+  }

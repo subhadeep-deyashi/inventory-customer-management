@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="CustStyles.css">
+    <style>
+      
+    </style>
+    
+</head>
+<body onload="start()">
+  <script src="custjs.js"></script>
+  <div class="container">
+    <div class="top">
+      <div class="btn-box">
+          <button id="b1" onclick="byCust()">ALL CUSTOMERS</button>
+          <button id="b2" onclick="byId()">FIND BY ID</button>
+          <button id="b3" onclick="byName()">FIND BY NAME</button> 
+      </div>
+
+      <div id="c1"class="content">
+        <div class="content-left">  
+        
+        <!--<p>Lorem Ipsum is simply dummy
+        text of the printing and typesetting
+        industry. Lorem Ipsum has been the i
+        ndustry's standard dummy text ever
+        since the 1500s, when an unknown printer
+        took a galley of type and scrambled it to
+        make a type specimen book. It has survived
+        not only five centuries</p>-->
+        <div class="table">
+          <table id="ctab">
+            <tr>
+                <th class="normalrow" nowrap>
+                    CUST ID      
+                </th>
+                <th  class="normalrow">
+                    FIRSTNAME      
+                </th>
+                <th  class="normalrow">
+                    LASTNAME   
+                </th>
+                <th  class="normalrow">
+                    ADDRESS      
+                </th>
+                <th  class="normalrow" nowrap>
+                    ACTIVE ORDERS
+              </th>
+          </tr>
+          
+        </table>
+      </div>
+        
+        </div>
+        <div class="content-right">
+        <p>Placeholder</p>
+        <div class="table">
+        <table id="ctab">
+          <thead id="allhead">
+          <tr>
+              <th id="custhead" class="normalrow" nowrap>
+                  CUST ID      
+              </th>
+              <th id="custhead1" class="normalrow">
+                  FIRSTNAME      
+              </th>
+              <th id="custhead2" class="normalrow">
+                  LASTNAME   
+              </th>
+              <th id="custhead3" class="normalrow">
+                  ADDRESS      
+              </th>
+              <th id="custhead4" class="normalrow" nowrap>
+                  ACTIVE ORDERS
+            </th>
+        </tr>
+      </thead>
+      <tbody id="allcust_tbod">
+              
+      </tbody>
+        
+      </table>
+    </div>
+      </div>
+      </div>
+      
+
+      <div id="c2"class="content">
+        <div class="content-left">  
+        <h1>Search Cust ID</h1>
+        <p>Lorem Ipsum is simply dummy 
+          text of the printing and typesetting 
+          industry. Lorem Ipsum has been the i
+          ndustry's standard dummy text ever 
+          since the 1500s, when an unknown printer 
+          took a galley of type and scrambled it to 
+          make a type specimen book. It has survived 
+          not only five centuries, but also the leap 
+          into electronic typesetting, remaining essentially 
+          unchanged. It was popularised in the 1960s with the 
+          release of Letraset sheets containing Lorem Ipsum 
+          passages, and more recently with desktop publishing s
+          oftware like Aldus PageMaker including versions of 
+          Lorem Ipsum.</p>
+          <form>
+            <label for="fname">Customer ID</label>
+            <input type="text" id="cid" name="cid">
+          </form>
+          <button id="go2" onclick="allord1()">GO</button>
+        </div>
+        <div class="content-right">
+        <p>Placeholder</p>
+        <table id="ctab1">
+          <thead>
+          <tr>
+              <th id="thcust" class="normalrow" nowrap>
+                  CUST ID      
+              </th>
+              <th id ="thfname" class="normalrow">
+                  FIRSTNAME      
+              </th>
+              <th id="thlname" class="normalrow">
+                  LASTNAME   
+              </th>
+              <th id="thadd" class="normalrow">
+                  ADDRESS      
+              </th>
+              <th id="thact" class="normalrow" nowrap>
+                  ACTIVE ORDERS
+            </th>
+            <th id="thtot">
+  
+            </th>
+        </tr>
+      </thead>
+      <tbody id="tbod">
+
+      </tbody>
+      </table>
+      <button id="allorders1" onclick="allOrders1()">
+        VIEW ALL ORDERS
+      </button>
+      </div>
+      </div>
+      
+
+      <div id="c3"class="content">
+        <div class="content-left">  
+        <h1>Search Name</h1>
+        <p>Lorem Ipsum is simply dummy 
+          text of the printing and typesetting 
+          industry. Lorem Ipsum has been the i
+          ndustry's standard dummy text ever 
+          since the 1500s, when an unknown printer 
+          took a galley of type and scrambled it to 
+          make a type specimen book. It has survived 
+          not only five centuries, but also the leap 
+          into electronic typesetting, remaining essentially 
+          unchanged. It was popularised in the 1960s with the 
+          release of Letraset sheets containing Lorem Ipsum 
+          passages, and more recently with desktop publishing s
+          oftware like Aldus PageMaker including versions of 
+          Lorem Ipsum.</p>
+          <form>
+            <label for="fname">Customer Name</label>
+            <input type="text" id="fname" name="fname" value="Customer Name" id="frm">
+          </form>
+          <button id="go1" onclick="allord2()">GO</button>
+        </div>
+        <div class="content-right">
+        <p>Placeholder</p>
+        <table id="ctab2">
+          <thead>
+          <tr>
+            <th id="thcust1" class="normalrow" nowrap>
+                CUST ID      
+            </th>
+            <th id ="thfname1" class="normalrow">
+                FIRSTNAME      
+            </th>
+            <th id="thlname1" class="normalrow">
+                LASTNAME   
+            </th>
+            <th id="thadd1" class="normalrow">
+                ADDRESS      
+            </th>
+            <th id="thact1" class="normalrow" nowrap>
+                ACTIVE ORDERS
+          </th>
+          <th id="thtot1">
+          </th>
+      </tr>
+      </thead>
+      <tbody id="tbod1">
+
+      </tbody>
+      </table>
+      <button id="allorders2" onclick="allOrders2()">
+        VIEW ALL ORDERS
+      </button>
+      </div>
+      </div>
+      </div>
+       <script>
+         var c1 = document.getElementById("c1");
+         var c2 = document.getElementById("c2");
+         var c3 = document.getElementById("c3");
+         var b1 = document.getElementById("b1");
+         var b2 = document.getElementById("b2");
+         var b3 = document.getElementById("b3");
+         
+         function byCust()
+         {
+          c1.style.transform = "translateX(0)";
+           c2.style.transform = "translateX(100%)";
+           c3.style.transform = "translateX(100%)";
+           b1.style.color = "#4c72db";
+           b2.style.color = "#000";
+           b3.style.color = "#000";
+           c1.style.transitionDelay = "0.3s";//.3
+           c2.style.transitionDelay = "0s";
+           c3.style.transitionDelay = "0s";
+
+           document.getElementById("custhead").style.backgroundColor = "#3561da";
+           document.getElementById("custhead1").style.backgroundColor = "#3561da";
+           document.getElementById("custhead2").style.backgroundColor = "#3561da";
+           document.getElementById("custhead3").style.backgroundColor = "#3561da";
+           document.getElementById("custhead4").style.backgroundColor = "#3561da";
+
+           
+
+           
+
+          var params ={
+        id :0}
+           
+
+           $.get("http://localhost:8080/Ajax/Serv",  $.param(params), function(responseJson) { 
+    	      x = responseJson;
+    	      console.log(x);// Execute Ajax GET request on URL of "someservlet" and execute the following function with Ajax response JSON...
+    
+            $.each(responseJson,  function(index, cust){
+                  $("<tr>").appendTo($("#allcust_tbod")) 
+                    .append($("<td>").text(cust.cust_id))        // Create HTML <td> element, set its text content with id of currently iterated product and append it to the <tr>.
+                    .append($("<td>").text(cust.firstname))      // Create HTML <td> element, set its text content with name of currently iterated product and append it to the <tr>.
+                    .append($("<td>").text(cust.lastname))
+                    .append($("<td>").text(cust.address))
+                    .append($("<td>").text(cust.active_orders));
+    });
+});
+         }
+         function byId()
+         {
+          document.getElementById("custhead").style.backgroundColor = "white"
+           document.getElementById("custhead1").style.backgroundColor = "white"
+           document.getElementById("custhead2").style.backgroundColor = "white"
+           document.getElementById("custhead3").style.backgroundColor = "white"
+           document.getElementById("custhead4").style.backgroundColor = "white"
+
+           document.getElementById("allcust_tbod").innerHTML = "";
+           document.getElementById("tbod").innerHTML = "";
+
+           document.getElementById("thcust").style.backgroundColor = "white";
+           document.getElementById("thfname").style.backgroundColor = "white";
+           document.getElementById("thlname").style.backgroundColor = "white";
+           document.getElementById("thadd").style.backgroundColor = "white";
+           document.getElementById("thact").style.backgroundColor = "white";
+           document.getElementById("thtot").style.backgroundColor = "white";
+
+           document.getElementById("allorders1").style.visibility = "hidden";
+
+           c1.style.transform = "translateX(100%)";
+           c2.style.transform = "translateX(0)";
+           c3.style.transform = "translateX(100%)";
+           b2.style.color = "#4c72db";
+           b1.style.color = "#000";
+           b3.style.color = "#000";
+           c1.style.transitionDelay = "0s";
+           c2.style.transitionDelay = "0.3s";
+           c3.style.transitionDelay = "0s";
+
+           
+         }
+         function byName()
+         {
+          document.getElementById("tbod1").innerHTML = "";
+
+           document.getElementById("custhead").style.backgroundColor = "white"
+           document.getElementById("custhead1").style.backgroundColor = "white"
+           document.getElementById("custhead2").style.backgroundColor = "white"
+           document.getElementById("custhead3").style.backgroundColor = "white"
+           document.getElementById("custhead4").style.backgroundColor = "white"
+
+           document.getElementById("thcust").style.backgroundColor = "white";
+           document.getElementById("thfname").style.backgroundColor = "white";
+           document.getElementById("thlname").style.backgroundColor = "white";
+           document.getElementById("thadd").style.backgroundColor = "white";
+           document.getElementById("thact").style.backgroundColor = "white";
+           document.getElementById("thtot").style.backgroundColor = "white";
+
+           document.getElementById("thcust1").style.backgroundColor = "white";
+           document.getElementById("thfname1").style.backgroundColor = "white";
+           document.getElementById("thlname1").style.backgroundColor = "white";
+           document.getElementById("thadd1").style.backgroundColor = "white";
+           document.getElementById("thact1").style.backgroundColor = "white";
+           document.getElementById("thtot1").style.backgroundColor = "white";
+
+           document.getElementById("allcust_tbod").innerHTML = "";
+
+           document.getElementById("allorders2").style.visibility = "hidden";
+           
+           c1.style.transform = "translateX(100%)";
+           c2.style.transform = "translateX(100%)";
+           c3.style.transform = "translateX(0)";
+           b3.style.color = "#4c72db";
+           b1.style.color = "#000";
+           b2.style.color = "#000";
+           c1.style.transitionDelay = "0s";
+           c2.style.transitionDelay = "0s";
+           c3.style.transitionDelay = "0.3s";
+         }
+       </script>
+       </div>
+    
+</body>
+</html>

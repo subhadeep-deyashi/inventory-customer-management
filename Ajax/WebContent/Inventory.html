@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="InvStyles.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <script src="invjs.js"></script>
+    <div class="container">
+    <div class="top">
+        <div class="btn-box">
+            <button id="b1" onclick="showInv()">INVENTORY</button>
+            <button id="b2" onclick="stats()">STATISTICS</button>
+        </div>
+        <div class="content">
+            <div class="table">
+                <table id="invtab">
+                <thead id="heads">
+                <tr>
+                  <th id="head1">ITEM ID</th>
+                  <th id="head2"> NAME</th>
+                  <th id="head3">QUANTITY</th>
+                </tr>
+                </thead>
+                <tbody id="inv_tbod">
+              
+                </tbody>
+              </table>
+            </div>
+            <div class="stats">
+                <div id="piechart"></div>
+              
+            </div>
+        </div>
+    </div>
+    <div class="radios" id="rad">
+        <form>
+            <input type="radio" id="day"value="Revenue" name="chart" onclick="genChart()">
+            <label for="Revenue">Last Day</label><br>
+            <input type="radio" id="Monthly"value="Monthly" name="chart" onclick="genChart1()">
+            <label for="Monthly">Last Month</label><br>
+            <input type="radio" id="yearly"value="yearly" name="chart" onclick="genChart2()">
+            <label for="Monthly">Last Year</label><br>
+        </form>     
+    </div>
+    </div>
+</body>
+</html>

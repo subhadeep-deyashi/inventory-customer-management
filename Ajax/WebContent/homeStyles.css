@@ -1,0 +1,86 @@
+
+html, body, section {
+	height: 100%;
+}
+body {
+	color: #fff;
+	text-align: center;
+}
+div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.container {
+	display: flex;
+}
+div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.customer {
+	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(255, 255, 225, 0.10)), url(custpic.jpg);
+	background-size: cover;
+    background-position: center;
+    flex: 1;
+    padding: 1rem;
+    filter: blur(8px);
+  -webkit-filter: blur(8px);
+	transition: all .2s ease-in-out;
+}
+.inventory {
+	background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(164, 222, 102, 0.10)), url(invpic.jpg);
+	background-size: cover;
+    background-position: center;
+	flex: 1;
+    padding: 1rem;
+    filter: blur(8px);
+  -webkit-filter: blur(8px);
+	transition: all .2s ease-in-out;
+}
+
+
+.customer:hover, .inventory:hover {
+    transform: scale(0.95);
+    filter: blur(0);
+  -webkit-filter: blur(0);
+  
+}
+
+.customer h1 {
+	font-family: Calibri, Candara, Segoe, “Segoe UI”, Optima, Arial, sans-serif;
+    font-size: 5rem;
+}
+.inventory h1 {
+	font-family: Calibri, Candara, Segoe, “Segoe UI”, Optima, Arial, sans-serif;
+	font-size: 5rem;
+}
+.button {
+    font-family: Calibri, Candara, Segoe, “Segoe UI”, Optima, Arial, sans-serif;
+	display: inline-block;
+    min-width: 130px;
+    padding: 0 33px;
+    height: 42px;
+    line-height: 36px;
+   	border-radius: 42px;
+    font-size: 1.5rem;
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #f6f6f6;
+    border: 2px solid transparent;
+    cursor: pointer;
+    color: #333435;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .25s ease-out, box-shadow .25s ease;
+    background-color: transparent;
+    border: 2px solid #3583fb;
+}
+.button:hover {
+	background: #3583fb;
+	color: #fff;
+}
+
